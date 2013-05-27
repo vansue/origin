@@ -2,24 +2,27 @@
     <div id='first-sidebar'>
         <div class='widget'>
             <h2>Side Navigation</h2>
-            <ul id='menu-categories-menu'>
-                <li><a href="#">Home Page</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <?php wp_nav_menu( array('menu'=>'Categories Menu', 'container'=>'') ); ?>
         </div>
 
         <div class='widget'>
             <h2>RSS feeds</h2>
-            <p class='date'>August 20, 2012</p>
-            <h4><a href='#'>Lorem ipsum dolor sit amet</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Virtutes timidiores.</p>
+            <?php if (function_exists('fetch_feed')) {
+                include_once(ABSPATH.WPINC.'/feed.php');
+                $feed = fetch_feed( 'http://www.izwebz.com/feed' );
+                $limit = $feed->get_item_quantity(2);
+                $items = $feed->get_items(0, $limit);
+                if (!$items) echo "The feed is not available";
+                else foreach ($items as $item) : ?>
+                    <p class='date'><?php echo $item->get_date('F j, Y'); ?></p>
+                    <h4><a href="<?php echo $item->get_permalink(); ?>"><?php echo $item->get_title(); ?></a></h4>
+                    <p><?php echo substr($item->get_description(),0,250); ?></p>
+            <?php endforeach;} ?>
         </div>
-    </div><!--end first-sidebar-->
-    <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Widgets')) : else : ?>
+    <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Left Sidebar')) : else : ?>
     
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
 
 
 	<?php endif; ?>
+    </div><!--end first-sidebar-->

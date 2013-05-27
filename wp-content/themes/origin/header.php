@@ -39,12 +39,9 @@
 
 	<?php wp_head(); ?>
 	<!--JAVASCRIPT-->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<!--<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>-->
 	<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/js/easyAccordionFixed.js"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/js/utility.js"></script>
-	<script type="text/javascript" src='<?php echo bloginfo('template_directory'); ?>/js/main-nav.js'></script>
-	<script type="text/javascript" src='<?php echo bloginfo('template_directory'); ?>/js/tab-nav.js'></script>
 	<!--JAVASCRIPT-->
 
 </head>
