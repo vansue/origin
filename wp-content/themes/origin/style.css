@@ -90,12 +90,24 @@ a {color: #ce9702; text-decoration: none;}
 .post h3 a:hover {text-decoration: underline;}
 .post img {float: left; margin: 0px 15px;}
 .post p {margin-left: 158px;}
-.post .meta-data {margin: 15px 0px; border-top: 1px solid #bcd4da; border-bottom: 1px solid #bcd4da; padding: 5px;}
+.post .meta-data {margin: 80px 0px; border-top: 1px solid #bcd4da; border-bottom: 1px solid #bcd4da; padding: 5px;}
 .readmore {position: absolute; bottom: 7px; right: 10px;}
 .post-edit-link {float: right;}
 a.readmore:hover {text-decoration: underline;}
 .comment-link {position: absolute; top: 0px; right: 0px; display: block; width: 43px; height: 36px; padding-top: 5px; font-weight: bold; color: #ce9702; text-align: center; background: url(images/comment-bubble-rtl.png) no-repeat top left;}
 .comment-link:hover {color: #c06;}
+.links {position: absolute; left: 27px; bottom: 40px; list-style: disc;}
+.links li a:hover {color: #c06;}
+.tooltip {display: none; position: absolute; background: #d7e7ea; border: 1px solid #bcd4da; border-radius: 5px; padding: 5px; width: 400px;}
+
+/****** CUSTOM PAGE ******/
+#main-content dt {cursor: pointer; color: #ce9702; font-size: 14px;}
+#main-content .current-question {color: #c06;}
+
+/****** SINGLE PAGE ******/
+body.single #content-wrap, body.page #content-wrap, body.error404 #content-wrap, body.archive #content-wrap {margin: 30px 0px;}
+body.single #main-content .post p {margin: 10px 0px; padding: 0;}
+body.single #main-content .post h3, body.page #content-wrap .post h3, body.archive #main-content h3 {font-size: 18px; margin: 0px;}
 
 /****** SECOND SIDEBAR ******/
 .tabs {height: 33px; border-left: 1px solid #bcd4da;}
@@ -115,31 +127,3 @@ a.readmore:hover {text-decoration: underline;}
 #footer p {text-align: center; color: #848484; text-transform: uppercase; font-size: 14px;}
 #footer img {position: absolute; top: 8px; right: 250px;}
 
-/***** ACCORDION ******/
-.easy-accordion{display:block;position:relative;overflow:hidden;padding:0;margin:0;}
-.easy-accordion dt,.easy-accordion dd{margin:0;padding:0}
-.easy-accordion dt,.easy-accordion dd{position:absolute}
-.easy-accordion dt{margin-bottom:0;margin-left:0;z-index:5;/* Safari */ -webkit-transform: rotate(-90deg); /* Firefox */ -moz-transform: rotate(-90deg);-moz-transform-origin: 20px 0px;  /* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);-ms-transform: rotate(0deg);cursor:pointer;}
-.easy-accordion dd{z-index:1;opacity:0;overflow:hidden}
-.easy-accordion dd.active{opacity:1;}
-.easy-accordion dd.no-more-active{z-index:2;opacity:1}
-.easy-accordion dd.active{z-index:3}
-.easy-accordion dd.plus{z-index:4}
-.easy-accordion .slide-number{position:absolute;bottom:0;left:10px;font-weight:normal;font-size:1.1em;/* Safari */ -webkit-transform: rotate(90deg); /* Firefox */ -moz-transform: rotate(90deg);  /* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-ms-transform: rotate(0deg);}
-
-dd p{line-height:150%}
-
-#accordion{width:750px;height:245px;padding:0px;background:#fff;}
-#accordion dl{width:750px;height:245px}
-#accordion dt{height:46px;line-height:46px;text-align:right;padding:0 15px 0 0;border-top: 2px solid white;font-size:1.1em;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;background-color: #D7E7EA;color:#26526c}
-#accordion dt.active{cursor:pointer;color:#fff;background:#BCD4DA}
-#accordion dt.hover{color:#fff; background:#BCD4DA}
-#accordion dd{padding:10px;background-color: white;border:1px solid #dbe9ea;border-left:0;margin-right:3px}
-#accordion .slide-number{color:#68889b;left:10px;font-weight:bold}
-#accordion .active .slide-number{color:#fff;}
-#accordion dd img{float:left;margin:10px;}
-#accordion h2 {margin: 0px 0px 0px 148px;}
-#accordion h2 a{font-size:18px;margin-top:0px}
-#accordion h2 a:hover {text-decoration: underline;}
-#accordion .more{padding-top:10px;display:block}
-#accordion a.more:hover {text-decoration: underline;}

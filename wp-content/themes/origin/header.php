@@ -40,9 +40,16 @@
 	<?php wp_head(); ?>
 	<!--JAVASCRIPT-->
 	<!--<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>-->
-	<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/js/easyAccordionFixed.js"></script>
-	<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/js/utility.js"></script>
-	<!--JAVASCRIPT-->
+	<?php if(is_home()) : ?>
+		<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/js/easyAccordionFixed.js"></script>
+		<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/js/utility.js"></script>
+		<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/js/tooltips.js"></script>
+		<!--JAVASCRIPT-->
+		<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_directory'); ?>/css/featured.css" />
+	<?php endif ;?>
+	<?php if(is_page(11)) :?>
+		<script type="text/javascript" src="<?php echo bloginfo('template_directory'); ?>/js/faqs.js"></script>
+	<?php endif ;?>
 
 </head>
 
